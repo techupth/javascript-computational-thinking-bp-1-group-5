@@ -16,6 +16,11 @@ const movies = [
 
 function findMoviesByYear(movies, year) {
   // Start coding here
+  const filteredMovies = movies.filter(movie => {
+    const releaseYear = new Date(movie.releaseDate).getFullYear();
+    return releaseYear === year;
+    });
+    return filteredMovies;
 }
 
 console.log(findMoviesByYear(movies, 1994));
