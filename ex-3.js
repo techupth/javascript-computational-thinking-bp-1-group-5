@@ -7,6 +7,15 @@ const products = [
 ];
 
 function getMostExpensiveProduct(products) {
+
+    let mostPrice = products[0] //  is initialized with the first product in the products array. This sets a starting point for comparison.
+    for( let i = 0 ; i < products.length ; i++){
+        if(products[i].price > mostPrice.price){
+            mostPrice = product[i]
+        } 
+    }
+return mostPrice
+
   // Start coding here
   let mostExpensive = products[0];
   for (const product of products) {
@@ -15,6 +24,8 @@ function getMostExpensiveProduct(products) {
     }
   }
   return mostExpensive;
+
 }
 
 getMostExpensiveProduct(products); // Output: { name: "Laptop", price: 1000 }
+console.log(getMostExpensiveProduct(products));
