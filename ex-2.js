@@ -1,6 +1,7 @@
 
 
 function countVowels(words) {
+
     let vowels = ["a", "e", "i", "o", "u"]
     let result = 0 ;
     for(let i = 0; i < words.length ; i++){
@@ -14,6 +15,16 @@ function countVowels(words) {
         
     }
     return result
+
+  // Start coding here
+  let totalVowels = 0;
+  for (let i = 0; i < words.length; i++) {
+    if (['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'].includes(words[i])) {
+      totalVowels = totalVowels + 1;
+    }
+  }
+  return totalVowels;
+
 }
 
 countVowels("Hello World"); // Output: 3

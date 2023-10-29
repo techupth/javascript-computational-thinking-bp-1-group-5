@@ -1,4 +1,5 @@
 function getLetterFrequency(words) {
+
   const frequency = {};
 
   // Loop through each character in the input string
@@ -18,6 +19,18 @@ function getLetterFrequency(words) {
   }
 
   // Return the letter frequency object
+
+  // Start coding here
+  const frequency = {};
+  for (i = 0; i < words.length; i++) {
+    const letter = words[i].toLowerCase();
+    if (frequency[letter]) {
+      frequency[letter]++;
+    } else {
+      frequency[letter] = 1;
+    }
+  }
+
   return frequency;
 }
 
@@ -32,8 +45,8 @@ console.log(letterFrequency);
   t: 2,
   e: 1,
   c: 1,
-	h: 2,
-	u: 1,
-	p: 1
+  h: 2,
+  u: 1,
+  p: 1
 }
 */

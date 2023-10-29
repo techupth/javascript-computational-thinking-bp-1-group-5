@@ -15,10 +15,21 @@ const movies = [
 ];
 
 function findMoviesByYear(movies, year) {
+
   const filteredMovies = movies.filter(movie => {
     return movie.releaseDate.startsWith(year);
   });
   return filteredMovies;
+
+  // Start coding here
+  let newArray = []
+  for (let i = 0; i < movies.length; i++) {
+    if (new Date(movies[i].releaseDate).getFullYear() === year) {
+      newArray.push(movies[i])
+    }
+  }
+  return newArray;
+
 }
 
 const result = findMoviesByYear(movies, "1994");
